@@ -33,7 +33,4 @@ public class MainActivity extends AppCompatActivity {
         gridView.setAdapter(colorAdapter);
     }
 
-    public void gotoColorActivity(View v, ColorObject co){
-
-    }
 }

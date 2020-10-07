@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class ColorDisplay extends AppCompatActivity {
 
@@ -13,6 +14,11 @@ public class ColorDisplay extends AppCompatActivity {
         setContentView(R.layout.activity_color_display);
 
         Intent intent = getIntent();
+        String message = intent.getStringExtra("COLOR");
+        TextView textView = findViewById(R.id.ColorName);
+        textView.setText(message);
+
+        findViewById(R.id.Background).setBackgroundColor(intent.getIntExtra("COLOR_ID", 1));
 
     }
 }
