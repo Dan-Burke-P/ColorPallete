@@ -2,6 +2,7 @@ package edu.temple.colorpallete;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,14 +40,16 @@ public class ColorAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.color_layout, null);
         TextView label = convertView.findViewById(R.id.colorLabel);
-        ColorObject co = colorObjects[position];
-
+        final ColorObject co = colorObjects[position];
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.println(Log.ASSERT, "tag",co.name);
+            }
+        });
         label.setText(co.name);
-        if(co.isSelected){
-            convertView.setBackgroundColor(Color.WHITE);
-        }else{
-            convertView.setBackgroundColor(co.color);
-        }
+        convertView.setBackgroundColor(co.color);
+
         return convertView;
     }
 }
