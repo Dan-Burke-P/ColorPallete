@@ -2,9 +2,12 @@ package edu.temple.colorpallete;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ColorObject[] colors = {
@@ -28,5 +31,9 @@ public class MainActivity extends AppCompatActivity {
         GridView gridView = (GridView)findViewById(R.id.colorPallete);
         gridView.setNumColumns(3);
         gridView.setAdapter(colorAdapter);
+    }
+
+    public void gotoColorActivity(View v, ColorObject co){
+
     }
 }

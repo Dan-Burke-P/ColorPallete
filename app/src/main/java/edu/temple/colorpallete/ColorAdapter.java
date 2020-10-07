@@ -1,7 +1,7 @@
 package edu.temple.colorpallete;
 
 import android.content.Context;
-import android.graphics.Color;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +44,10 @@ public class ColorAdapter extends BaseAdapter {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.println(Log.ASSERT, "tag",co.name);
+                Intent intent = new Intent(context, ColorDisplay.class);
+                intent.putExtra("COLOR", co.name);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
             }
         });
         label.setText(co.name);
