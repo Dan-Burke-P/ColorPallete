@@ -7,4 +7,5 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_color_display">ColorDisplay</string>
+    <string name="main_activity_instruction">Click a color below to launch the Canvas</string>
 </resources>
