@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Palette de couleurs</string>
+    <string name="title_activity_color_screen">Écran couleur</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="title_activity_color_display">Écran couleur</string>
+    <string name="main_activity_instruction">Cliquez sur une couleur ci-dessous pour lancer le canevas</string>
+
+    <string name="red">rouge</string>
+    <string name="blue">bleu</string>
+    <string name="green">vert</string>
+    <string name="black">noir</string>
+    <string name="cyan">cyan</string>
+    <string name="gray">gris</string>
+    <string name="yellow">Jaune</string>
+    <string name="light_gray">gris clair</string>
+    <string name="magenta">magenta</string>
+    <string name="dark_gray">gris foncé</string>
+</resources>
