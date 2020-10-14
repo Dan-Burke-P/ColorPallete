@@ -19,4 +19,6 @@
     <string name="light_gray">gris clair</string>
     <string name="magenta">magenta</string>
     <string name="dark_gray">gris foncé</string>
+
+    <string name="title_activity_main">activité de palette</string>
 </resources>

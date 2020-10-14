@@ -12,7 +12,7 @@ public class ColorDisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color_display);
-
+        this.setTitle(getString(R.string.title_activity_color_display));
         Intent intent = getIntent();
         String message = intent.getStringExtra("COLOR");
         TextView textView = findViewById(R.id.ColorName);

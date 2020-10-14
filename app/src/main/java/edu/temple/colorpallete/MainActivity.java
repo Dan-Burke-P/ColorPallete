@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Resources res = this.getResources();
-
+        this.setTitle(res.getString(R.string.title_activity_main));
         ColorObject[] colors = {
                 new ColorObject(res.getString(R.string.red), Color.RED),
                 new ColorObject(res.getString(R.string.blue), Color.BLUE),
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         ColorAdapter colorAdapter = new ColorAdapter(colors, getApplicationContext());
         GridView gridView = (GridView)findViewById(R.id.colorPallete);
         gridView.setNumColumns(3);
+
         gridView.setAdapter(colorAdapter);
     }
 

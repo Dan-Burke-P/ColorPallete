@@ -2,7 +2,7 @@
     <string name="app_name">ColorPallete</string>
     <string name="title_activity_color_screen">ColorScreen</string>
 
-    <string name="title_activity_color_display">ColorDisplay</string>
+    <string name="title_activity_color_display">Color Activity</string>
     <string name="main_activity_instruction">Click a color below to launch the Canvas</string>
 
     <string name="red">red</string>
@@ -15,4 +15,6 @@
     <string name="light_gray">light gray</string>
     <string name="magenta">magenta</string>
     <string name="dark_gray">dark gray</string>
+
+    <string name="title_activity_main">Palette Activity</string>
 </resources>
