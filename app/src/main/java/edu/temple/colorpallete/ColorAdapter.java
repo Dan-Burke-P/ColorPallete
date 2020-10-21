@@ -44,11 +44,11 @@ public class ColorAdapter extends BaseAdapter {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ColorDisplay.class);
-                intent.putExtra("COLOR", co.name);
-                intent.putExtra("COLOR_ID", co.color);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                //Intent intent = new Intent(context, ColorDisplay.class);
+//                intent.putExtra("COLOR", co.name);
+//                intent.putExtra("COLOR_ID", co.color);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                context.startActivity(intent);
             }
         });
         label.setText(co.name);
