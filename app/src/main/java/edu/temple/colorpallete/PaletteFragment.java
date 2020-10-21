@@ -16,6 +16,7 @@ import android.widget.GridView;
 public class PaletteFragment extends Fragment {
     private View view;
     private GridView gridView;
+    private CanvasFragment canvasFragment;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,13 +37,16 @@ public class PaletteFragment extends Fragment {
                 new ColorObject(res.getString(R.string.magenta), Color.MAGENTA),
                 new ColorObject(res.getString(R.string.dark_gray), Color.DKGRAY)
         };
-        ColorAdapter colorAdapter = new ColorAdapter(colors, getContext());
+        ColorAdapter colorAdapter = new ColorAdapter(colors, getContext(), canvasFragment);
         gridView.setNumColumns(3);
 
         gridView.setAdapter(colorAdapter);
         return view;
     }
 
+    public void setCanvasFragment(CanvasFragment _canvasFragment){
+        canvasFragment = _canvasFragment;
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,10 +54,12 @@ public class PaletteFragment extends Fragment {
 
     }
 
-    public static Fragment newInstance(String name){
+    public static Fragment newInstance(String name, CanvasFragment _canvasFragment){
+
         Bundle bundle = new Bundle();
         bundle.putString("NAME", name);
-        Fragment fragment = new PaletteFragment();
+        PaletteFragment fragment = new PaletteFragment();
+        fragment.setCanvasFragment(_canvasFragment);
         fragment.setArguments(bundle);
         return fragment;
     }

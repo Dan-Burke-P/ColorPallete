@@ -11,12 +11,13 @@ import android.widget.TextView;
 
 public class ColorAdapter extends BaseAdapter {
 
-    public ColorAdapter(ColorObject[] _colorObjects, Context _context){
+    public ColorAdapter(ColorObject[] _colorObjects, Context _context, CanvasFragment canvasFragment){
         this.colorObjects = _colorObjects;
         this.context = _context;
+        this.canvasFragment = canvasFragment;
         inflater = LayoutInflater.from(context);
     }
-
+    CanvasFragment canvasFragment;
     ColorObject[] colorObjects;
     Context context;
     LayoutInflater inflater;
@@ -44,11 +45,7 @@ public class ColorAdapter extends BaseAdapter {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(context, ColorDisplay.class);
-//                intent.putExtra("COLOR", co.name);
-//                intent.putExtra("COLOR_ID", co.color);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                context.startActivity(intent);
+                canvasFragment.updateColor(co);
             }
         });
         label.setText(co.name);

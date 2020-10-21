@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Fragment paletteFragment;
-
+    private CanvasFragment canvasFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -22,9 +22,12 @@ public class MainActivity extends AppCompatActivity {
         Resources res = this.getResources();
         this.setTitle(res.getString(R.string.title_activity_main));
 
-        paletteFragment = PaletteFragment.newInstance("palette fragment");
+        canvasFragment = new CanvasFragment();
+        paletteFragment = PaletteFragment.newInstance("palette fragment", canvasFragment);
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.Container_1, paletteFragment).commit();
+                .replace(R.id.Container_1, paletteFragment)
+                .replace(R.id.Container_2, canvasFragment)
+                .commit();
     }
 
 }
